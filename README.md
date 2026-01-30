@@ -3,7 +3,7 @@
 <img width="1375" height="584" alt="Capture d’écran 2026-01-30 à 17 25 25" src="https://github.com/user-attachments/assets/8db86de7-5a23-463d-9897-1170df46094f" />
 
 **Market Microstructure Intelligence Terminal**
-*Analyst: Youn Goger-Le Goux*
+
 
 ---
 
@@ -26,3 +26,4 @@
 1. **Clone the repository**:
    ```bash
    git clone [https://github.com/youn2G/Nexus-Eye-LOB.git](https://github.com/youn2G/Nexus-Eye-LOB.git)
+
