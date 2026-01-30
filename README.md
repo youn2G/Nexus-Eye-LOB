@@ -8,7 +8,7 @@
 ---
 
 ## ⚡ Overview
-**NEXUS-EYE** is a real-time **Limit Order Book (LOB)** visualizer designed with a high-end "Palantir Gotham" aesthetic. It provides institutional-grade clarity on market liquidity, mapping the friction between supply (Asks) and demand (Bids) for high-frequency trading analysis.
+**NEXUS-EYE** is a real-time **Limit Order Book (LOB)** visualizer. It provides institutional-grade clarity on market liquidity, mapping the friction between supply (Asks) and demand (Bids) for high-frequency trading analysis.
 
 ## 📊 Key Intelligence
 - **Live Depth Mapping**: Visualizes cumulative volume to detect institutional liquidity walls.
@@ -26,4 +26,5 @@
 1. **Clone the repository**:
    ```bash
    git clone [https://github.com/youn2G/Nexus-Eye-LOB.git](https://github.com/youn2G/Nexus-Eye-LOB.git)
+
 
