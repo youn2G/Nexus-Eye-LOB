@@ -1,0 +1,235 @@
+/* =============================================================================
+   GOTHAM ORDER BOOK - Palantir Style Theme
+   Ultra-minimalist cyber-security aesthetic
+   ============================================================================= */
+
+/* Import JetBrains Mono for that terminal feel */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Color Palette */
+:root {
+    --bg-primary: #0a0e14;
+    --bg-secondary: #1a1f2c;
+    --bg-tertiary: #252b3b;
+    --border-color: #2a3441;
+    --text-primary: #e6edf3;
+    --text-secondary: #7d8590;
+    --text-muted: #484f58;
+    --accent-green: #00ff88;
+    --accent-red: #ff3366;
+    --accent-blue: #00d4ff;
+    --accent-yellow: #ffcc00;
+}
+
+/* Global Styles */
+.stApp {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Hide Streamlit branding */
+#MainMenu, footer, header {
+    visibility: hidden !important;
+}
+
+.stDeployButton {
+    display: none !important;
+}
+
+/* Main container */
+.main .block-container {
+    padding: 2rem 3rem !important;
+    max-width: 100% !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: var(--text-primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-weight: 500 !important;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* System Status Badge */
+.system-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent-green);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 5px var(--accent-green); }
+    50% { opacity: 0.5; box-shadow: 0 0 15px var(--accent-green); }
+}
+
+/* Data Tables */
+.stDataFrame {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
+}
+
+.stDataFrame table {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.85rem !important;
+}
+
+.stDataFrame th {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.stDataFrame td {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Metrics */
+.stMetric {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
+    padding: 1rem !important;
+}
+
+.stMetric label {
+    color: var(--text-secondary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-size: 0.7rem !important;
+}
+
+.stMetric [data-testid="stMetricValue"] {
+    color: var(--accent-blue) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+/* Widget Containers */
+.widget-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.widget-title {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Trade Side Colors */
+.buy-side {
+    color: var(--accent-green) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+.sell-side {
+    color: var(--accent-red) !important;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color);
+}
+
+/* Plotly Chart Container */
+.stPlotlyChart {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
+    padding: 1rem !important;
+}
+
+/* Column dividers */
+.stColumn {
+    border-right: 1px solid var(--border-color);
+    padding-right: 1rem;
+}
+
+.stColumn:last-child {
+    border-right: none;
+}
+
+/* KPI Glow Effect */
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.kpi-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--bg-secondary) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+section[data-testid="stSidebar"] .stMarkdown {
+    color: var(--text-primary) !important;
+}
